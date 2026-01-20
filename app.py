@@ -22,7 +22,7 @@ question = st.text_area(
 # Submit button
 if st.button("Get Answer", type="primary"):
     if question:
-        with st.spinner("⏳ Processing... (this takes 10-12 minutes)"):
+        with st.spinner("⏳ Processing... "):
             start_time = time.time()
             
             try:
