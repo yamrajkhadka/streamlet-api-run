@@ -22,7 +22,7 @@ question = st.text_area(
 # Submit button
 if st.button("Get Answer", type="primary"):
     if question:
-        with st.spinner("⏳ Processing... (this takes 10-12 minutes)"):
+        with st.spinner("⏳ Processing... "):
             start_time = time.time()
             
             try:
@@ -30,7 +30,7 @@ if st.button("Get Answer", type="primary"):
                 response = requests.post(
                     API_URL,
                     json={"question": question},
-                    timeout=900
+                    timeout=9000
                 )
                 
                 if response.status_code == 200:
